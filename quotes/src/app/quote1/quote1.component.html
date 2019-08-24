@@ -1,0 +1,19 @@
+<div>
+    <h1>My quotes</h1>
+    <hr>
+    <ul>
+      <li *ngFor='let quote of quotes;let i = index'>
+        {{quote.quote}}
+        {{quote.postDate}}
+
+        <button (click)='showDetails(i)'>Show Details</button>
+        <app-vote></app-vote>
+        <app-quotedescription  *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quotedescription>
+    
+      </li>
+      
+   </ul>
+       <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+  
+  </div>
+  
