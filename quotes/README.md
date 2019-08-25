@@ -1,4 +1,4 @@
-# Project Title
+# Quote
 
 The project is a quote application where you can share your favorite quote
 
