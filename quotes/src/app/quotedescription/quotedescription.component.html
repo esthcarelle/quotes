@@ -1,4 +1,4 @@
 <p>The author of the quote is {{quote.author}}</p>
 <p>The name of the one who posted is {{quote.name}}</p>
-<p>the quote has passed {{quote.postDate|quotepipe}} days </p>
+<p>The quote was posted {{quote.postDate|timeAgo}} </p>
 <button (click)= 'quoteDelete(true)' class="btn btn-info">Delete</button>
