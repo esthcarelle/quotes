@@ -7,7 +7,9 @@ import { Quote} from '../quote';
 })
 export class Quote1Component implements OnInit {
  quotes:Quote[]=[
-   new Quote("aaa","what a beautifulname it is","mesdd",new Date())
+
+   new Quote("Abraham Lincoln","Whatever you are, be a good one","lyse",new Date(2019,8,24)),
+   new Quote("Ralph WAldo","wA great man is always willing to be little","steve",new Date(2019,8,25))
  ]
  showDetails(index){
   this.quotes[index].showDescription = !this.quotes[index].showDescription;
