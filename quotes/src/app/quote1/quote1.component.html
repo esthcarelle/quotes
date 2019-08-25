@@ -6,8 +6,8 @@
         {{quote.quote}}
         {{quote.postDate}}
 
-        <button (click)='showDetails(i)'>Show Details</button>
-        <app-vote></app-vote>
+        <button (click)='showDetails(i)' class="btn btn-info">Show Details</button>
+        <app-vote ></app-vote>
         <app-quotedescription  *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quotedescription>
     
       </li>

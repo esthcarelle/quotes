@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container">
     <h2 class="text-center">Create a new Goal</h2>
     <hr>
     <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
@@ -13,6 +13,15 @@
         </div>
         <div class="form-group">
   
+            <label for="author">Author</label>
+            <input type="text" required class="form-control"  [(ngModel)]="newQuote.author" id="author" name="author" #author='ngModel' required>
+            <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+                <p>author is required</p>
+              </div>
+            Display {{newQuote.author}}
+        </div>
+        <div class="form-group">
+  
             <label for="description">Quote</label>
             <textarea class="form-control" id="quote" rows="4" required [(ngModel)]="newQuote.quote" name="quote"  #quote="ngModel" required></textarea>
             <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
@@ -20,6 +29,7 @@
               </div>
             Display {{newQuote.quote}}
         </div>
-        <button type="submit" class="btn btn-success">Add Goal</button>
+
+        <button type="submit" class="btn btn-info">Add Goal</button>
     </form >
   </div>

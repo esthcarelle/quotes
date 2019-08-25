@@ -1,9 +1,9 @@
 <p>
-    {{quote.name}}
+    The name of the one who posted is {{quote.name}}
   </p>
   <p>
-    {{quote.author}}
+    The author of the quote is {{quote.author}}
   </p>
   <p>the quote has passed {{quote.postDate|quotepipe}} </p>
   <!-- <app-vote ></app-vote> -->
-  <button (click)= 'quoteDelete(true)'>Delete</button>
+  <button (click)= 'quoteDelete(true)' class="btn btn-info">Delete</button>

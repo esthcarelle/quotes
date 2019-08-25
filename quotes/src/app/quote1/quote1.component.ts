@@ -7,7 +7,7 @@ import { Quote} from '../quote';
 })
 export class Quote1Component implements OnInit {
  quotes:Quote[]=[
-   new Quote("aaa","what a beautifulname it is","me",new Date())
+   new Quote("aaa","what a beautifulname it is","mesdd",new Date())
  ]
  showDetails(index){
   this.quotes[index].showDescription = !this.quotes[index].showDescription;

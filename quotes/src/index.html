@@ -7,8 +7,43 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+  
 </head>
+<style>
+  body,html{
+    height:100%;
+  }
+ 
+  #welcome{
+    position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align:center;
+  }
+#head{
+ font-size:20px;
+  height: 100%; 
+
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+  background-image:url('https://cdn.pixabay.com/photo/2016/04/15/04/02/water-1330252__340.jpg')
+}
+</style>
 <body>
+  
+    <div id="head">
+        <div id="welcome">
+        <h1>Welcome to your quote app</h1>
+        <p>You can post a quote and upvote or downvote a  posted vote
+        </p>
+    </div>
+  </div>
+   
   <app-root></app-root>
+
 </body>
 </html>
