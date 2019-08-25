@@ -7,6 +7,7 @@ import { Quote} from '../quote';
 })
 export class Quote1Component implements OnInit {
  quotes:Quote[]=[
+  new Quote("love","A great man is always willing to be little","Ghandi",new Date(2019,8,23)),
   new Quote("Wil","I have a dream that one day little black boys and girls will be holding hands with little white boys and girls","Martin Luther King",new Date(2019,8,23)),
   new Quote("Merlyn","Be kind whenever possible. It is always possible","Dalai Lama",new Date(2019,7,24)),
   new Quote("Raissa","Life is a flower of which love is the honey","Victor hugo",new Date(2019,7,24)),
