@@ -1,29 +1,33 @@
-<div id="main">
-    <h1>My quotes</h1>
-    <hr>
-    <div class="row">
-      <div class="col-md-6">
-          <ul>
-              <li *ngFor='let quote of quotes;let i = index'>
-                  {{quote.quote}}
-                  {{quote.postDate|date}}
-                  <div class="row">
-                      <div class="col-md-6">
-                          <button (click)='showDetails(i)' class="btn btn-info">Show Details</button>
-                      </div>
-                      <div class="col-md-6">
-                          <app-vote ></app-vote>
-                      </div>
-                  </div>
-                      
-                  <app-quotedescription  *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quotedescription>
-              </li>      
-          </ul>
-      </div>
+<div id="main" >
+    <div >
+            <h1>My quotes</h1>
+            <hr>
+            <div class="row">
+              <div class="col-md-6">
+                  <ul>
+                      <li *ngFor='let quote of quotes;let i = index'style="margin-bottom:15%">
+                          {{quote.quote}}
+                          {{quote.postDate|date}}
+                          <div class="row">
+                              <div class="col-md-6">
+                                  <button (click)='showDetails(i)' class="btn btn-info">Show Details</button>
+                              </div>
+                              <div class="col-md-6">
+                                  <app-vote ></app-vote>
+                              </div>
+                          </div>
+                              
+                          <app-quotedescription  *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quotedescription>
+                      </li>      
+                  </ul>
+              </div>
+        
+              <div class="col-md-6">
+                  <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+              </div>
+            </div>
+        </div>
 
-      <div class="col-md-6">
-          <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-      </div>
     </div>
-</div>
+   
   
